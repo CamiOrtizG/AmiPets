@@ -1,0 +1,41 @@
+{% extends 'core/base.html' %}
+{% block  contenido %}
+{% load static %}
+<br><br><br>
+      <center>
+        <div>
+        <h2>Resultado de su cotización</h2>
+        <br>
+        </div>
+      </center>
+
+        <div class="d-flex justify-content-center">          
+          <div class="card">
+            <div class="card-body" style="background-color: rgba(133, 192, 171, 0.897);"><!--revisar color del cardbody-->
+              <table class="table table-striped table-bordered border-dark" style="background-color:  rgb(187, 217, 217);">
+
+              <td>Detalle de tarifa seleccionada: </td>
+              <td>Valor de tarifa seleccionada: </td>
+              <td>Número ingresado días/semanas:</td>
+              <td>Resultado cotización:</td>
+            <br>
+
+              <tr>
+              <td>{{ tarifa.detalle }}</td>
+              <td>$ {{ tarifa.valor }}</td>
+              <td> {{ numero }}</td>
+              <td>$ {{ resultado }}</td>
+
+            </tr>
+              
+              </table>
+        
+              <a href="/calcular_tarifa" class="btn btn-primary" > Volver a calcular </a>
+
+                  </div>
+                </div>
+              </div>
+      
+
+      <br><br><br><br><br><br><br><br><br><br><br>
+{% endblock %}

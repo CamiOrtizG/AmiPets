@@ -1,0 +1,61 @@
+{% extends 'core/base.html' %}
+{% block contenido %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+<br><br><br>
+    <div class="row">
+      <div class="col-12 col-md-6 offset-md-3">
+        <div class="card" style="background-color: rgb(187, 217, 217);">
+          <div class="card-body">
+            
+            <h2 class="d-flex justify-content-center">Realice el check-in</h2>
+            <br>
+
+        <form action="" method="post" enctype="multipart/form-data">
+
+          {% csrf_token %}
+          {{ form | crispy }}
+
+          <h6 class="d-flex justify-content-left"> *Campos obligatorios </h6>
+          <div class="d-flex justify-content-center">
+            <input type="submit" value="Guardar" class="btn btn-primary">
+            &nbsp; &nbsp;
+            
+          <a href="/listarHuesped" class="btn btn-primary" > Ver reservas </a>
+            
+            
+           
+
+          </div>
+         
+
+        </form>
+        {{mensaje}}
+      </div>
+    </div>
+   
+        <title>Uso de jQuery con Django</title>
+        <script src="{% static 'js/jquery.js' %}"></script>
+        <script>
+            $(document).ready(function() {
+                // Tu código jQuery aquí
+                // Por ejemplo:
+                $('#myButton').click(function() {
+                    alert('¡Hola desde jQuery!');
+                });
+            });
+        </script>
+
+    <body>
+        <button id="myButton">Haz clic aquí</button>
+    </body>
+
+    
+
+  </div>
+</div>
+
+
+
+{% endblock %}

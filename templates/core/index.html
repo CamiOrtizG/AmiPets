@@ -1,0 +1,71 @@
+{% extends 'core/base2.html' %}
+{% block  contenido %}
+{% load static %}
+        <p></p>
+
+       <br><br><br>
+
+       <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="card" style="width: 25rem;">
+              <img src="{% static "/img/hotel_los_castanos-2.jpeg" %} " class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Tarifas</h5>
+                <p class="card-text">Revisa nuestros precios </p>
+                <a href="{% url 'nosotros' %}" class="btn btn-primary">Ver más</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 25rem;">
+              <img src="{% static "/img/descrip.jpg" %} " class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Descripción</h5>
+                <p class="card-text">Hotel resort amiPets es un hotel muy cerca de Santiago, que cuenta con espaciosos caniles, donde recibimos perritos y gatos...</p>
+                <a href="#" class="btn btn-primary">Ver más</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="row">
+          <div class="col">
+            <div class="card" style="width: 25rem;">
+              <img src="{% static "/img/nosotros_01.jpg" %} " class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Nosotros</h5>
+                <p class="card-text">Hotel resort amipets tiene como objetivo recibir a quienes son parte de tu familia (perros y gatos) con el alojamiento y la atención que se merecen. ¡Cotiza con nosotros, te esperamos!</p>
+                <a href="" class="btn btn-primary">Ver más</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 25rem;">
+              <img src="{% static "/img/mapa.jpeg" %} " class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Contacto</h5>
+                <p class="card-text">Condominio San Sebastián s/n, Lampa</p>
+                <p class="card-text">+569 435 8779</p>
+                <a href="" class="btn btn-primary">Ver más</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 25rem;">
+              <img src="{% static "/img/nosotross.jpeg" %} " class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Funcionarios</h5>
+                <p class="card-text">Acceso directo a funcionarios</p>
+                <a href="{% url 'login' %}" class="btn btn-primary">Iniciar sesión</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+        </div>
+
+
+        {% endblock %}
+     
