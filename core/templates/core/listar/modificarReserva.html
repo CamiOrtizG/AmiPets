@@ -1,0 +1,39 @@
+{% extends 'core/base.html' %}
+{% block  contenido %}
+{% load static %}
+{% load crispy_forms_tags %}
+        <p></p>
+    <br>    
+    <br>    
+
+        <!--Modificación de clientes ingresados-->
+        <div class="row">
+        <div class="col-12 col-md-6 offset-md-3">
+            <div class="card" style="background-color: rgb(187, 217, 217);">
+                <div class="card-body">
+                    <div>
+                        <H2>Modificar reserva</H2>
+                      </div>
+                      <br>
+                <form action="" class="row g-3"  method="post">
+                        {% csrf_token %}
+                        {{ form | crispy }}
+                        <div class="d-flex justify-content-center">
+                            <button type="submit" class="btn btn-primary">Confirmar</button>
+                            &nbsp; &nbsp;
+                            <a href="/lista_reserva" class="btn btn-primary" > Ver reservas </a>
+                        </div>    
+                    
+                </form>
+                {{mensaje}}
+            </div>
+             </div>
+            </div>
+
+        </div>    
+        </div>  
+    </div>
+
+      
+
+{% endblock %}
